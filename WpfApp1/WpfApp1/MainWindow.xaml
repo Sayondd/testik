@@ -4,11 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <PasswordBox/>
+        <Label Content="Логин" Height="30" Margin="0,0,0,50"/>
+        <Label Content="Пароль" Height="30" Margin="0,50,0,0"/>
+        <Label Content="Роль" Height="30" Margin="0,150,0,0"/>
+        <TextBox x:Name="login" Height="30" Width="150" Margin="0,0,0,50"/>
+        <TextBox x:Name="pass" Height="30" Width="150" Margin="0,50,0,0"/>
+        <PasswordBox x:Name="passb" Height="30" Width="150" Margin="0,50,0,0"/>
+        <ComboBox x:Name="roli" Height="30" Width="150" Margin="0,150,0,0" ItemsSource="{Binding rol}"/>
+            <CheckBox x:Name="check" Content="Показать" Height="30" Margin="0,60,45,0" HorizontalAlignment="Right" Click="CheckBox_Click"/>
+        <Button Height="30" Width="150" Margin="0,250,0,0" Content="Войти" BorderThickness="4" Click="Button_Click"/>
+        <Button Height="30" Width="150" Margin="0,330,0,0" Background="Transparent" BorderThickness="0" Click="Button_Click_1">
+            <TextBlock TextDecorations="Underline">Регистрация</TextBlock>
+        </Button>
     </Grid>
 </Window>
